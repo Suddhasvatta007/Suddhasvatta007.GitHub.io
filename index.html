@@ -48,8 +48,20 @@
         .navbar a:hover {
             background: #f1f1f1;
         }
+
+        /* First block (no forced tall height) */
+        .hero {
+            padding: 80px 20px 20px; /* extra top padding to clear fixed navbar */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Generic section (no forced giant min-height) */
         .section {
-            min-height: 80vh;
             padding: 40px 20px 20px;
             display: flex;
             flex-direction: column;
@@ -58,13 +70,17 @@
             max-width: 900px;
             margin: 0 auto;
         }
-        .section h2 {
+
+        /* Make ALL h2 (in .section and .bio) red, as intended */
+        .section h2,
+        .bio h2 {
             color: #b22222;
             margin-bottom: 10px;
             padding-top: 5px;
             position: relative;
             top: -10px;
         }
+
         .back-to-top {
             margin-top: 20px;
             background: #1a1a1a;
@@ -105,6 +121,8 @@
             max-width: 900px;
             width: 100%;
             line-height: 1.6;
+            padding: 40px 20px 20px;
+            margin: 0 auto;
         }
         .label {
             color: #b22222;
@@ -120,7 +138,8 @@
         <a href="#service">Service</a>
     </div>
 
-    <div id="section1" class="section">
+    <!-- First block: no huge whitespace -->
+    <div id="section1" class="hero">
         <div class="section-content">
             <img src="photo.png" alt="Your Image">
             <div class="section-text">
